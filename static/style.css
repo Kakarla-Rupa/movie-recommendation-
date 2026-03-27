@@ -1,0 +1,291 @@
+:root {
+    --primary: #9400D3;       /* Deep Violet */
+    --primary-light: #BB86FC; /* Light Purple */
+    --accent: #03DAC6;        /* Teal accent */
+    --bg-dark: #121212;       /* Near black */
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-white: #FFFFFF;
+    --text-grey: #B0B0B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Cosmic Background Blur Elements */
+.bg-blur {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-blur::before,
+.bg-blur::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(150px);
+    opacity: 0.25;
+}
+
+.bg-blur::before {
+    background: var(--primary);
+    top: -200px;
+    left: -200px;
+    animation: drift 15s infinite alternate ease-in-out;
+}
+
+.bg-blur::after {
+    background: var(--accent);
+    bottom: -200px;
+    right: -200px;
+    animation: drift 20s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    z-index: 10;
+}
+
+/* Header Sections */
+header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo i {
+    width: 48px;
+    height: 48px;
+    color: var(--primary-light);
+}
+
+.logo h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.logo h1 span {
+    color: var(--primary-light);
+}
+
+.tagline {
+    color: var(--text-grey);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Glassmorphism Search Card */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter : blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.4s ease;
+}
+
+.main-search {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.search-icon {
+    color: var(--text-grey);
+}
+
+input[type="text"] {
+    flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--glass-border);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--text-white);
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-light);
+}
+
+.glow-btn {
+    background: linear-gradient(45deg, var(--primary), var(--primary-light));
+    border: none;
+    border-radius: 1rem;
+    padding: 1.2rem 2.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.glow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(187, 134, 252, 0.6);
+}
+
+.glow-btn:active {
+    transform: scale(0.98);
+}
+
+/* Recommendation Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.movie-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-light);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.movie-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #fff, var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.movie-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.genre-tag {
+    background: rgba(187, 134, 252, 0.1);
+    color: var(--primary-light);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(187, 134, 252, 0.2);
+}
+
+.movie-overview {
+    color: var(--text-grey);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Animations and Utilities */
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* AI Orb Loader */
+.loader-container {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.ai-orb {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, var(--primary-light), var(--primary));
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 0 40px var(--primary);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 60px var(--primary-light); }
+}
+
+footer {
+    text-align: center;
+    margin-top: 6rem;
+    padding: 2rem;
+    color: var(--text-grey);
+    font-size: 0.9rem;
+}
+
+/* Responsive Hacks */
+@media (max-width: 768px) {
+    .logo h1 { font-size: 2.5rem; }
+    .main-search { padding: 1.5rem; }
+    .search-input-wrapper { flex-direction: column; align-items: stretch; }
+    .glow-btn { width: 100%; }
+}

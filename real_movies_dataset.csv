@@ -1,0 +1,51 @@
+movie_id,title,genres,overview
+1,The Shawshank Redemption,Drama,Two imprisoned men bond over years and find hope through acts of decency.
+2,The Godfather,Crime|Drama,The aging patriarch of a crime dynasty transfers control to his reluctant son.
+3,The Dark Knight,Action|Crime|Drama,"Batman faces the Joker, a criminal mastermind who plunges Gotham into chaos."
+4,Inception,Action|Sci-Fi|Thriller,A thief who steals secrets through dream-sharing technology is given a final mission.
+5,Interstellar,Adventure|Drama|Sci-Fi,A team travels through a wormhole in space to save humanity.
+6,Fight Club,Drama,An insomniac office worker forms an underground fight club.
+7,Forrest Gump,Drama|Romance,The life journey of a simple man who witnesses historical events.
+8,The Matrix,Action|Sci-Fi,A hacker discovers reality is a simulation controlled by machines.
+9,Gladiator,Action|Drama,A Roman general seeks revenge against a corrupt emperor.
+10,Titanic,Drama|Romance,A romance unfolds aboard the ill-fated RMS Titanic.
+11,Avatar,Action|Adventure|Fantasy,A marine on an alien planet becomes torn between duty and love.
+12,The Avengers,Action|Adventure|Sci-Fi,Earth’s mightiest heroes unite to stop a global threat.
+13,Avengers: Endgame,Action|Adventure|Sci-Fi,The Avengers assemble to undo the destruction caused by Thanos.
+14,Parasite,Drama|Thriller,A poor family schemes to become employed by a wealthy household.
+15,Joker,Crime|Drama|Thriller,A failed comedian descends into madness and crime.
+16,The Lion King,Animation|Drama|Family,A young lion prince flees his kingdom after tragedy.
+17,Frozen,Animation|Adventure|Family,A princess sets out to find her estranged sister with ice powers.
+18,Harry Potter and the Sorcerer's Stone,Adventure|Fantasy|Family,A boy discovers he is a wizard and attends a magical school.
+19,The Lord of the Rings: The Fellowship of the Ring,Adventure|Fantasy,A hobbit begins a quest to destroy a powerful ring.
+20,Spider-Man,Action|Adventure|Sci-Fi,A teenager gains spider-like powers and becomes a hero.
+21,Iron Man,Action|Sci-Fi,A billionaire builds a high-tech armored suit to fight evil.
+22,Black Panther,Action|Adventure|Sci-Fi,The king of Wakanda must defend his nation from enemies.
+23,Doctor Strange,Action|Adventure|Fantasy,A surgeon learns mystical arts after a career-ending accident.
+24,Deadpool,Action|Comedy,A mercenary with healing powers seeks revenge.
+25,The Conjuring,Horror|Thriller,Paranormal investigators help a family haunted by dark forces.
+26,Get Out,Horror|Thriller,A man uncovers disturbing secrets at his girlfriend’s family home.
+27,La La Land,Comedy|Drama|Romance,A musician and actress fall in love while pursuing dreams.
+28,The Notebook,Drama|Romance,A young couple’s love story spans decades.
+29,Whiplash,Drama|Music,A drummer pushes himself under a strict music instructor.
+30,The Social Network,Biography|Drama,The story of the creation of Facebook.
+31,Shutter Island,Mystery|Thriller,A U.S. Marshal investigates a disappearance at a mental hospital.
+32,The Prestige,Drama|Mystery|Sci-Fi,Two magicians engage in a rivalry filled with obsession.
+33,Mad Max: Fury Road,Action|Adventure|Sci-Fi,"In a wasteland, rebels flee a tyrant warlord."
+34,Gravity,Drama|Sci-Fi|Thriller,Astronauts struggle to survive after an accident in space.
+35,Her,Drama|Romance|Sci-Fi,A lonely man develops a relationship with an AI system.
+36,The Hunger Games,Action|Adventure|Sci-Fi,A girl volunteers for a deadly televised competition.
+37,The Wolf of Wall Street,Biography|Crime|Drama,A stockbroker rises and falls in a world of greed.
+38,The Silence of the Lambs,Crime|Thriller,An FBI trainee seeks help from a brilliant serial killer.
+39,The Departed,Crime|Drama|Thriller,An undercover cop and a mole hunt each other.
+40,Finding Nemo,Animation|Adventure|Comedy,A clownfish searches the ocean for his missing son.
+41,The Incredibles,Animation|Action|Family,A family of superheroes returns to action.
+42,Moana,Animation|Adventure|Family,A young girl sails to save her island.
+43,Tenet,Action|Sci-Fi|Thriller,An agent manipulates time to prevent global catastrophe.
+44,Dune,Adventure|Sci-Fi,A noble family fights for control of a desert planet.
+45,The Batman,Action|Crime|Drama,Batman uncovers corruption in Gotham City.
+46,Coco,Animation|Family|Music,A boy journeys to the Land of the Dead.
+47,Inside Out,Animation|Adventure|Family,A girl’s emotions guide her through life changes.
+48,The Truman Show,Drama|Sci-Fi,A man discovers his life is a reality television show.
+49,The Grand Budapest Hotel,Comedy|Drama,A concierge becomes involved in a priceless art theft.
+50,Up,Animation|Adventure|Comedy,An old man flies his house to South America with balloons.

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Movie Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.js"></script>
+</head>
+<body>
+    <div class="bg-blur"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i data-lucide="clapperboard"></i>
+                <h1>Cine<span>AI</span></h1>
+            </div>
+            <p class="tagline">Intelligent Movie Recommendations Powered by NLP</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="glass-card main-search">
+                    <div class="search-input-wrapper">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" id="movie-search" placeholder="Enter a movie you love..." list="movie-list">
+                        <datalist id="movie-list">
+                          <!-- Filled by JS -->
+                        </datalist>
+                        <button id="recommend-btn" class="glow-btn">
+                            Get AI Recommendations
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results" class="results-grid hidden">
+                <!-- Recommendations will be injected here -->
+            </section>
+
+            <section id="loader" class="loader-container hidden">
+                <div class="ai-orb"></div>
+                <p>Analyzing your taste...</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2026 CineAI Engine. Purely content-based filtering.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
